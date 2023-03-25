@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "923042783460",
+    "project_id": "cobra-37835",
+    "storage_bucket": "cobra-37835.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923042783460:android:b20bd72d5e47a6bebc8cf1",
+        "android_client_info": {
+          "package_name": "com.costoobra.cobra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923042783460-jmsv0nbnho8oceod1ramgb7fgdnbmf74.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.costoobra.cobra",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "923042783460-6r68ka2487qvpfqe7gqs6lkgan4pfeih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk_ghWEYADvW6yWDOVC1Q1HIdAvO0yboE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923042783460-6r68ka2487qvpfqe7gqs6lkgan4pfeih.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "923042783460-h2o0ame17nf1n7u72qb2mk0cn5mejdq9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.costoobra.cobra"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

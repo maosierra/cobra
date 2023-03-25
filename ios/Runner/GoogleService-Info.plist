@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>923042783460-h2o0ame17nf1n7u72qb2mk0cn5mejdq9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.923042783460-h2o0ame17nf1n7u72qb2mk0cn5mejdq9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>923042783460-jmsv0nbnho8oceod1ramgb7fgdnbmf74.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBBaRpkpxLHLX0v9G9hggyYT1jKgAfLnaY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>923042783460</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.costoobra.cobra</string>
+	<key>PROJECT_ID</key>
+	<string>cobra-37835</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cobra-37835.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:923042783460:ios:8157d059f3b43eb1bc8cf1</string>
+</dict>
+</plist>
