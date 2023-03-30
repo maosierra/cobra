@@ -52,16 +52,20 @@ class _TransactionPageWidgetState extends State<TransactionPageWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 0.0),
                 child: Text(
-                  'Materials Transactions',
-                  style: FlutterFlowTheme.of(context).title1,
+                  FFLocalizations.of(context).getText(
+                    '7e1covdl' /* Materials Transactions */,
+                  ),
+                  style: FlutterFlowTheme.of(context).displaySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 10.0, 0.0, 0.0),
                 child: Text(
-                  'List all the materials transactions',
+                  FFLocalizations.of(context).getText(
+                    'n8q7kc09' /* List all the materials transac... */,
+                  ),
                   textAlign: TextAlign.start,
-                  style: FlutterFlowTheme.of(context).subtitle2,
+                  style: FlutterFlowTheme.of(context).titleSmall,
                 ),
               ),
               Expanded(
@@ -116,17 +120,20 @@ class _TransactionPageWidgetState extends State<TransactionPageWidget> {
                                           height: 44.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
+                                                .primary,
                                             shape: BoxShape.circle,
                                           ),
                                           child: Align(
                                             alignment:
                                                 AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'IN',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '4hgtv6er' /* IN */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1,
+                                                      .bodyMedium,
                                             ),
                                           ),
                                         ),
@@ -147,17 +154,23 @@ class _TransactionPageWidgetState extends State<TransactionPageWidget> {
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: Text(
-                                                    'Maquina',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'v0uti1t6' /* Maquina */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .title3,
+                                                        .headlineSmall,
                                                   ),
                                                 ),
                                                 Text(
-                                                  'cantidad - lugar',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '3jzcmqgf' /* cantidad - lugar */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                                 ),
                                               ],
                                             ),
@@ -184,18 +197,21 @@ class _TransactionPageWidgetState extends State<TransactionPageWidget> {
 
                     context.pushNamed('AddMaterialPage');
                   },
-                  text: 'New Transaction',
+                  text: FFLocalizations.of(context).getText(
+                    'nnafdz6w' /* New Transaction */,
+                  ),
                   options: FFButtonOptions(
                     width: 130.0,
                     height: 40.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                    color: FlutterFlowTheme.of(context).primary,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Poppins',
                           color: Colors.white,
                         ),
+                    elevation: 2.0,
                     borderSide: BorderSide(
                       color: Colors.transparent,
                       width: 1.0,

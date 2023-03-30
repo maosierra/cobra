@@ -58,8 +58,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'New Vehicule',
-          style: FlutterFlowTheme.of(context).title2,
+          FFLocalizations.of(context).getText(
+            'px6dkm6k' /* New Vehicule */,
+          ),
+          style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [
           Padding(
@@ -100,7 +102,7 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                     width: 50.0,
                     height: 50.0,
                     child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: FlutterFlowTheme.of(context).primary,
                     ),
                   ),
                 );
@@ -174,8 +176,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                             controller: _model.vehiculeNameController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Name',
-                              hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                              labelText: FFLocalizations.of(context).getText(
+                                'chzdloph' /* Name */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -208,7 +212,7 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 32.0, 20.0, 12.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                             textAlign: TextAlign.start,
                             validator: _model.vehiculeNameControllerValidator
                                 .asValidator(context),
@@ -222,8 +226,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Capacity',
-                              hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                              labelText: FFLocalizations.of(context).getText(
+                                'lamzi8ru' /* Capacity */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -256,7 +262,7 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 32.0, 20.0, 12.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                             textAlign: TextAlign.start,
                             keyboardType: TextInputType.number,
                             validator: _model.capacityControllerValidator
@@ -272,8 +278,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Driver name',
-                              hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                              labelText: FFLocalizations.of(context).getText(
+                                '5wq3xfl9' /* Driver name */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -306,7 +314,7 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 32.0, 20.0, 12.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                             textAlign: TextAlign.start,
                             keyboardType: TextInputType.number,
                             validator: _model.driverNameControllerValidator
@@ -331,8 +339,8 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                                     width: 50.0,
                                     height: 50.0,
                                     child: CircularProgressIndicator(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                     ),
                                   ),
                                 );
@@ -352,8 +360,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                                 width: double.infinity,
                                 height: 60.0,
                                 textStyle:
-                                    FlutterFlowTheme.of(context).bodyText1,
-                                hintText: 'Vehicule Type',
+                                    FlutterFlowTheme.of(context).bodyMedium,
+                                hintText: FFLocalizations.of(context).getText(
+                                  'rx3z4mgw' /* Vehicule Type */,
+                                ),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: FlutterFlowTheme.of(context)
@@ -382,8 +392,10 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                             controller: _model.descriptionController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: 'Enter description here..',
-                              hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                              hintText: FFLocalizations.of(context).getText(
+                                'rxn316a7' /* Enter description here.. */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -416,7 +428,7 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 32.0, 20.0, 12.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                             textAlign: TextAlign.start,
                             maxLines: 4,
                             keyboardType: TextInputType.multiline,
@@ -448,7 +460,9 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               .set(vehiculeCreateData);
                           context.safePop();
                         },
-                        text: 'Create Vehicule',
+                        text: FFLocalizations.of(context).getText(
+                          'za3mbeox' /* Create Vehicule */,
+                        ),
                         options: FFButtonOptions(
                           width: 270.0,
                           height: 50.0,
@@ -456,9 +470,9 @@ class _AddVehiculePageWidgetState extends State<AddVehiculePageWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryColor,
+                          color: FlutterFlowTheme.of(context).primary,
                           textStyle:
-                              FlutterFlowTheme.of(context).subtitle1.override(
+                              FlutterFlowTheme.of(context).titleMedium.override(
                                     fontFamily: 'Poppins',
                                     color: Colors.white,
                                   ),

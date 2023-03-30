@@ -45,8 +45,10 @@ class _TestlistWidgetState extends State<TestlistWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'My Team',
-          style: FlutterFlowTheme.of(context).title2,
+          FFLocalizations.of(context).getText(
+            'dr0zekru' /* My Team */,
+          ),
+          style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [
           Padding(
@@ -97,8 +99,10 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 0.0, 12.0),
                         child: Text(
-                          'Manage your team below.',
-                          style: FlutterFlowTheme.of(context).bodyText2,
+                          FFLocalizations.of(context).getText(
+                            'yrplozda' /* Manage your team below. */,
+                          ),
+                          style: FlutterFlowTheme.of(context).bodySmall,
                         ),
                       ),
                     ],
@@ -139,8 +143,7 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                   width: 44.0,
                                   height: 44.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Padding(
@@ -173,15 +176,19 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 4.0),
                                           child: Text(
-                                            'Random Name',
+                                            FFLocalizations.of(context).getText(
+                                              't6g0iucv' /* Random Name */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ),
                                         Text(
-                                          'user@randomname.com',
+                                          FFLocalizations.of(context).getText(
+                                            '0164rq40' /* user@randomname.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText2,
+                                              .bodySmall,
                                         ),
                                       ],
                                     ),
@@ -226,8 +233,7 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                   width: 44.0,
                                   height: 44.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Padding(
@@ -260,15 +266,19 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 4.0),
                                           child: Text(
-                                            'Random Name',
+                                            FFLocalizations.of(context).getText(
+                                              '2lchbndq' /* Random Name */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ),
                                         Text(
-                                          'user@randomname.com',
+                                          FFLocalizations.of(context).getText(
+                                            'dhduiw4j' /* user@randomname.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText2,
+                                              .bodySmall,
                                         ),
                                       ],
                                     ),
@@ -313,8 +323,7 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                   width: 44.0,
                                   height: 44.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Padding(
@@ -347,15 +356,19 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 4.0),
                                           child: Text(
-                                            'Random Name',
+                                            FFLocalizations.of(context).getText(
+                                              'rpml8q2b' /* Random Name */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ),
                                         Text(
-                                          'user@randomname.com',
+                                          FFLocalizations.of(context).getText(
+                                            'yqen5frz' /* user@randomname.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText2,
+                                              .bodySmall,
                                         ),
                                       ],
                                     ),
@@ -400,8 +413,7 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                   width: 44.0,
                                   height: 44.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Padding(
@@ -434,15 +446,19 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 4.0),
                                           child: Text(
-                                            'Random Name',
+                                            FFLocalizations.of(context).getText(
+                                              '4vtb1g3d' /* Random Name */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ),
                                         Text(
-                                          'user@randomname.com',
+                                          FFLocalizations.of(context).getText(
+                                            '8mvjqek1' /* user@randomname.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText2,
+                                              .bodySmall,
                                         ),
                                       ],
                                     ),
@@ -487,8 +503,7 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                   width: 44.0,
                                   height: 44.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Padding(
@@ -521,15 +536,19 @@ class _TestlistWidgetState extends State<TestlistWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 4.0),
                                           child: Text(
-                                            'Random Name',
+                                            FFLocalizations.of(context).getText(
+                                              'ecj8hy1f' /* Random Name */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ),
                                         Text(
-                                          'user@randomname.com',
+                                          FFLocalizations.of(context).getText(
+                                            '333w0uxe' /* user@randomname.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText2,
+                                              .bodySmall,
                                         ),
                                       ],
                                     ),

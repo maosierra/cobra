@@ -53,7 +53,7 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
               ),
             ),
           );
@@ -73,16 +73,20 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 0.0),
                     child: Text(
-                      'Vehicle',
-                      style: FlutterFlowTheme.of(context).title1,
+                      FFLocalizations.of(context).getText(
+                        'dcxwfi1o' /* Vehicle */,
+                      ),
+                      style: FlutterFlowTheme.of(context).displaySmall,
                     ),
                   ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 10.0, 0.0, 0.0),
                     child: Text(
-                      'List all the vehicle availables',
-                      style: FlutterFlowTheme.of(context).subtitle2,
+                      FFLocalizations.of(context).getText(
+                        '85bg9jp1' /* List all the vehicle available... */,
+                      ),
+                      style: FlutterFlowTheme.of(context).titleSmall,
                     ),
                   ),
                   Expanded(
@@ -122,7 +126,10 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
                                           extentRatio: 0.25,
                                           children: [
                                             SlidableAction(
-                                              label: 'Delete',
+                                              label: FFLocalizations.of(context)
+                                                  .getText(
+                                                'bn59fd26' /* Delete */,
+                                              ),
                                               backgroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .customColor3,
@@ -138,12 +145,12 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
                                           title: Text(
                                             vehiculesItem.name!,
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                           subtitle: Text(
                                             '${vehiculesItem.description} - ${vehiculesItem.capacity?.toString()}',
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
+                                                .titleSmall,
                                           ),
                                           trailing: Icon(
                                             Icons.arrow_forward_ios,
@@ -173,7 +180,9 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
 
                         context.pushNamed('AddVehiculePage');
                       },
-                      text: 'New Vehicle',
+                      text: FFLocalizations.of(context).getText(
+                        'x8wv79cc' /* New Vehicle */,
+                      ),
                       options: FFButtonOptions(
                         width: 130.0,
                         height: 40.0,
@@ -181,12 +190,13 @@ class _VehiclePageWidgetState extends State<VehiclePageWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle:
-                            FlutterFlowTheme.of(context).subtitle2.override(
+                            FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Poppins',
                                   color: Colors.white,
                                 ),
+                        elevation: 2.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,

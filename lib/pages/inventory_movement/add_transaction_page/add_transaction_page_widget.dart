@@ -50,7 +50,7 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+      backgroundColor: FlutterFlowTheme.of(context).primary,
       body: Form(
         key: _model.formKey,
         autovalidateMode: AutovalidateMode.disabled,
@@ -91,8 +91,10 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Add Transaction',
-                            style: FlutterFlowTheme.of(context).title2,
+                            FFLocalizations.of(context).getText(
+                              't2o2ickt' /* Add Transaction */,
+                            ),
+                            style: FlutterFlowTheme.of(context).headlineMedium,
                           ),
                           InkWell(
                             onTap: () async {
@@ -144,21 +146,25 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                             controller: _model.textController1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelStyle:
-                                  FlutterFlowTheme.of(context).title1.override(
-                                        fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        fontWeight: FontWeight.w300,
-                                      ),
-                              hintText: 'Amount',
-                              hintStyle:
-                                  FlutterFlowTheme.of(context).title1.override(
-                                        fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        fontWeight: FontWeight.w300,
-                                      ),
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .displaySmall
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                              hintText: FFLocalizations.of(context).getText(
+                                'd88k9qua' /* Amount */,
+                              ),
+                              hintStyle: FlutterFlowTheme.of(context)
+                                  .displaySmall
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    fontWeight: FontWeight.w300,
+                                  ),
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -197,7 +203,9 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                                 size: 32.0,
                               ),
                             ),
-                            style: FlutterFlowTheme.of(context).title1.override(
+                            style: FlutterFlowTheme.of(context)
+                                .displaySmall
+                                .override(
                                   fontFamily: 'Poppins',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
@@ -216,8 +224,10 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                           controller: _model.spentAtController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Spent At',
-                            labelStyle: FlutterFlowTheme.of(context).bodyText1,
+                            labelText: FFLocalizations.of(context).getText(
+                              'w5ubtd6x' /* Spent At */,
+                            ),
+                            labelStyle: FlutterFlowTheme.of(context).bodyMedium,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context)
@@ -253,7 +263,7 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                             contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 24.0, 24.0, 24.0),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText2,
+                          style: FlutterFlowTheme.of(context).bodySmall,
                           maxLines: null,
                           validator: _model.spentAtControllerValidator
                               .asValidator(context),
@@ -266,16 +276,24 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                           controller: _model.budgetController ??=
                               FormFieldController<String>(null),
                           options: [
-                            'Office Budget',
-                            'External Transfer',
-                            'ACH Payment'
+                            FFLocalizations.of(context).getText(
+                              'nlero8fn' /* Office Budget */,
+                            ),
+                            FFLocalizations.of(context).getText(
+                              '48j6x69j' /* External Transfer */,
+                            ),
+                            FFLocalizations.of(context).getText(
+                              'jyabzodj' /* ACH Payment */,
+                            )
                           ],
                           onChanged: (val) =>
                               setState(() => _model.budgetValue = val),
                           width: MediaQuery.of(context).size.width * 0.9,
                           height: 60.0,
-                          textStyle: FlutterFlowTheme.of(context).bodyText1,
-                          hintText: 'Type of Transfer',
+                          textStyle: FlutterFlowTheme.of(context).bodyMedium,
+                          hintText: FFLocalizations.of(context).getText(
+                            '5albjbt8' /* Type of Transfer */,
+                          ),
                           icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -301,10 +319,14 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                           controller: _model.reasonController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Reason',
-                            labelStyle: FlutterFlowTheme.of(context).bodyText2,
-                            hintText: 'Please type the reason here...',
-                            hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                            labelText: FFLocalizations.of(context).getText(
+                              'paf2i0mb' /* Reason */,
+                            ),
+                            labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                            hintText: FFLocalizations.of(context).getText(
+                              'znpk9nft' /* Please type the reason here... */,
+                            ),
+                            hintStyle: FlutterFlowTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context)
@@ -340,7 +362,7 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                             contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 40.0, 24.0, 0.0),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                           textAlign: TextAlign.start,
                           maxLines: 4,
                           validator: _model.reasonControllerValidator
@@ -365,7 +387,9 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Add Transaction',
+                        text: FFLocalizations.of(context).getText(
+                          '1rt2cfxf' /* Add Transaction */,
+                        ),
                         options: FFButtonOptions(
                           width: 300.0,
                           height: 70.0,
@@ -373,12 +397,13 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          textStyle:
-                              FlutterFlowTheme.of(context).title2.override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                  ),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                              ),
                           elevation: 0.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,
@@ -392,8 +417,10 @@ class _AddTransactionPageWidgetState extends State<AddTransactionPageWidget>
               ),
             ),
             Text(
-              'Tap above to complete request',
-              style: FlutterFlowTheme.of(context).bodyText1.override(
+              FFLocalizations.of(context).getText(
+                'rb2q5iv6' /* Tap above to complete request */,
+              ),
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: Color(0x81000000),
                   ),

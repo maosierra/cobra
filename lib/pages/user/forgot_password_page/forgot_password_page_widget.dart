@@ -96,13 +96,14 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           ),
                           Expanded(
                             child: Text(
-                              'Forgot Password',
+                              FFLocalizations.of(context).getText(
+                                'ird1g5c2' /* Forgot Password */,
+                              ),
                               style: FlutterFlowTheme.of(context)
-                                  .subtitle1
+                                  .titleMedium
                                   .override(
                                     fontFamily: 'Poppins',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                   ),
                             ),
                           ),
@@ -113,8 +114,10 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: Text(
-                        'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        FFLocalizations.of(context).getText(
+                          'qrp94kk2' /* We will send you an email with... */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ),
                     Padding(
@@ -124,9 +127,11 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                         controller: _model.emailAddressController,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Email Address',
+                          labelText: FFLocalizations.of(context).getText(
+                            'wlx4q4ig' /* Email Address */,
+                          ),
                           labelStyle: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodySmall
                               .override(
                                 fontFamily: 'Outfit',
                                 color:
@@ -134,9 +139,11 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.normal,
                               ),
-                          hintText: 'Enter your email...',
+                          hintText: FFLocalizations.of(context).getText(
+                            'f5mu4309' /* Enter your email... */,
+                          ),
                           hintStyle:
-                              FlutterFlowTheme.of(context).bodyText2.override(
+                              FlutterFlowTheme.of(context).bodySmall.override(
                                     fontFamily: 'Outfit',
                                     color: Color(0xFF57636C),
                                     fontSize: 14.0,
@@ -175,7 +182,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Outfit',
                               color: FlutterFlowTheme.of(context).primaryText,
                               fontSize: 14.0,
@@ -208,7 +215,9 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                             context: context,
                           );
                         },
-                        text: 'Resend Link',
+                        text: FFLocalizations.of(context).getText(
+                          'bxhtnmke' /* Resend Link */,
+                        ),
                         options: FFButtonOptions(
                           width: 230.0,
                           height: 50.0,
@@ -217,15 +226,13 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: Colors.white,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .subtitle2
-                              .override(
-                                fontFamily: 'Outfit',
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.normal,
-                              ),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Outfit',
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                           elevation: 3.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,

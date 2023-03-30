@@ -55,8 +55,10 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Create Material',
-          style: FlutterFlowTheme.of(context).title2,
+          FFLocalizations.of(context).getText(
+            'f6d3r6ud' /* Create Material */,
+          ),
+          style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [
           Padding(
@@ -98,7 +100,7 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                     width: 50.0,
                     height: 50.0,
                     child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: FlutterFlowTheme.of(context).primary,
                     ),
                   ),
                 );
@@ -127,7 +129,7 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                           width: 50.0,
                           height: 50.0,
                           child: CircularProgressIndicator(
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: FlutterFlowTheme.of(context).primary,
                           ),
                         ),
                       );
@@ -152,9 +154,12 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                 controller: _model.nameController,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Material Name',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'axtwy92e' /* Material Name */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
-                                      .title3
+                                      .headlineSmall
                                       .override(
                                         fontFamily: 'Poppins',
                                         color: FlutterFlowTheme.of(context)
@@ -194,7 +199,8 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 32.0, 20.0, 12.0),
                                 ),
-                                style: FlutterFlowTheme.of(context).title3,
+                                style:
+                                    FlutterFlowTheme.of(context).headlineSmall,
                                 textAlign: TextAlign.start,
                                 validator: _model.nameControllerValidator
                                     .asValidator(context),
@@ -207,9 +213,11 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                 controller: _model.descriptionController,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  hintText: 'Enter description here...',
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'ja65wm17' /* Enter description here... */,
+                                  ),
                                   hintStyle:
-                                      FlutterFlowTheme.of(context).bodyText2,
+                                      FlutterFlowTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
@@ -243,7 +251,7 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 32.0, 20.0, 12.0),
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                                 textAlign: TextAlign.start,
                                 maxLines: 4,
                                 keyboardType: TextInputType.multiline,
@@ -258,9 +266,12 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                 controller: _model.priceController,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Material Price',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    '8f7pf3cw' /* Material Price */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
-                                      .title3
+                                      .headlineSmall
                                       .override(
                                         fontFamily: 'Poppins',
                                         color: FlutterFlowTheme.of(context)
@@ -300,7 +311,8 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 32.0, 20.0, 12.0),
                                 ),
-                                style: FlutterFlowTheme.of(context).title3,
+                                style:
+                                    FlutterFlowTheme.of(context).headlineSmall,
                                 textAlign: TextAlign.start,
                                 keyboardType: TextInputType.number,
                                 validator: _model.priceControllerValidator
@@ -326,7 +338,7 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                         height: 50.0,
                                         child: CircularProgressIndicator(
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                         ),
                                       ),
                                     );
@@ -346,12 +358,15 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                         () => _model.typeSelectValue = val),
                                     height: 60.0,
                                     textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily: 'Poppins',
                                           color: Colors.black,
                                         ),
-                                    hintText: 'Select material type',
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'xkzflg9r' /* Select material type */,
+                                    ),
                                     icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,
                                       size: 15.0,
@@ -389,7 +404,7 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                         height: 50.0,
                                         child: CircularProgressIndicator(
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                         ),
                                       ),
                                     );
@@ -412,8 +427,11 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                     width: double.infinity,
                                     height: 60.0,
                                     textStyle:
-                                        FlutterFlowTheme.of(context).bodyText1,
-                                    hintText: 'Select unit of measure',
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'utmjntq2' /* Select unit of measure */,
+                                    ),
                                     icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -459,14 +477,16 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                         setState(() =>
                                             _model.statusValue = newValue!);
                                       },
-                                      activeColor: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      activeColor:
+                                          FlutterFlowTheme.of(context).primary,
                                     ),
                                   ),
                                   Text(
-                                    'Status',
+                                    FFLocalizations.of(context).getText(
+                                      'h49cj7b8' /* Status */,
+                                    ),
                                     style:
-                                        FlutterFlowTheme.of(context).bodyText1,
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                   ),
                                 ],
                               ),
@@ -504,7 +524,9 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                   .set(materialCreateData);
                               context.pop();
                             },
-                            text: 'Create Material',
+                            text: FFLocalizations.of(context).getText(
+                              'g7b2omyd' /* Create Material */,
+                            ),
                             options: FFButtonOptions(
                               width: 270.0,
                               height: 50.0,
@@ -512,9 +534,9 @@ class _AddMaterialPageWidgetState extends State<AddMaterialPageWidget> {
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primaryColor,
+                              color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle1
+                                  .titleMedium
                                   .override(
                                     fontFamily: 'Poppins',
                                     color: Colors.white,

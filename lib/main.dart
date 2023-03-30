@@ -90,7 +90,10 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: _locale,
-      supportedLocales: const [Locale('en', '')],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('es'),
+      ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
@@ -125,9 +128,9 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
+      'TransactionPage': TransactionPageWidget(),
       'MaterialPage': MaterialPageWidget(),
       'VehiclePage': VehiclePageWidget(),
-      'TransactionPage': TransactionPageWidget(),
       'PlacePage': PlacePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -140,7 +143,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPageName = tabs.keys.toList()[i];
         }),
         backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
-        selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
+        selectedItemColor: FlutterFlowTheme.of(context).primary,
         unselectedItemColor: Color(0xFFA8D239),
         showSelectedLabels: false,
         showUnselectedLabels: false,
@@ -148,10 +151,22 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
+              Icons.transform,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              '8dmw8c54' /* Transaccions */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
               Icons.image,
               size: 24.0,
             ),
-            label: 'Material',
+            label: FFLocalizations.of(context).getText(
+              'jl2zhyjx' /* Material */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -159,23 +174,19 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.directions_bus,
               size: 24.0,
             ),
-            label: 'Vehicle',
+            label: FFLocalizations.of(context).getText(
+              '0mbtr4wz' /* Vehicle */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.image,
+              Icons.place,
               size: 24.0,
             ),
-            label: 'Transaccions',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.image,
-              size: 24.0,
+            label: FFLocalizations.of(context).getText(
+              'ohy2pkzk' /* Material */,
             ),
-            label: 'Material',
             tooltip: '',
           )
         ],

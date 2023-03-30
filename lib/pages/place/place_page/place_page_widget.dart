@@ -40,9 +40,10 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<List<MaterialRecord>>(
-      stream: queryMaterialRecord(
-        queryBuilder: (materialRecord) => materialRecord.orderBy('name'),
+    return StreamBuilder<List<PlaceRecord>>(
+      stream: queryPlaceRecord(
+        queryBuilder: (placeRecord) =>
+            placeRecord.where('status', isEqualTo: true).orderBy('name'),
       ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
@@ -52,12 +53,12 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
               ),
             ),
           );
         }
-        List<MaterialRecord> placePageMaterialRecordList = snapshot.data!;
+        List<PlaceRecord> placePagePlaceRecordList = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -72,16 +73,20 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 0.0),
                     child: Text(
-                      'Materials',
-                      style: FlutterFlowTheme.of(context).title1,
+                      FFLocalizations.of(context).getText(
+                        'bchmsvoo' /* Places */,
+                      ),
+                      style: FlutterFlowTheme.of(context).displaySmall,
                     ),
                   ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 10.0, 0.0, 0.0),
                     child: Text(
-                      'List all the materials availables',
-                      style: FlutterFlowTheme.of(context).subtitle2,
+                      FFLocalizations.of(context).getText(
+                        'mbbq4e87' /* List all the places availables */,
+                      ),
+                      style: FlutterFlowTheme.of(context).titleSmall,
                     ),
                   ),
                   Expanded(
@@ -103,23 +108,25 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                             Expanded(
                               child: Builder(
                                 builder: (context) {
-                                  final materials =
-                                      placePageMaterialRecordList.toList();
+                                  final places =
+                                      placePagePlaceRecordList.toList();
                                   return ListView.builder(
                                     padding: EdgeInsets.zero,
                                     shrinkWrap: true,
                                     scrollDirection: Axis.vertical,
-                                    itemCount: materials.length,
-                                    itemBuilder: (context, materialsIndex) {
-                                      final materialsItem =
-                                          materials[materialsIndex];
+                                    itemCount: places.length,
+                                    itemBuilder: (context, placesIndex) {
+                                      final placesItem = places[placesIndex];
                                       return Slidable(
                                         endActionPane: ActionPane(
                                           motion: const ScrollMotion(),
                                           extentRatio: 0.25,
                                           children: [
                                             SlidableAction(
-                                              label: 'Delete',
+                                              label: FFLocalizations.of(context)
+                                                  .getText(
+                                                'k74obe9s' /* Delete */,
+                                              ),
                                               backgroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .customColor3,
@@ -127,7 +134,7 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                                               onPressed: (_) async {
                                                 logFirebaseEvent(
                                                     'PLACE_SlidableActionWidget_l1ux34xe_ON_T');
-                                                await materialsItem.reference
+                                                await placesItem.reference
                                                     .delete();
                                               },
                                             ),
@@ -135,14 +142,14 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                                         ),
                                         child: ListTile(
                                           title: Text(
-                                            materialsItem.name!,
+                                            placesItem.name!,
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                           subtitle: Text(
-                                            '${materialsItem.unitOfMeasureName} -  ${materialsItem.description}',
+                                            '${placesItem.address} -  ${placesItem.description}',
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
+                                                .titleSmall,
                                           ),
                                           tileColor: Color(0xFFF5F5F5),
                                           dense: false,
@@ -164,11 +171,13 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                     child: FFButtonWidget(
                       onPressed: () async {
                         logFirebaseEvent(
-                            'PLACE_PAGE_PAGE_AddMaterialButton_ON_TAP');
+                            'PLACE_PAGE_PAGE_AddPlaceButton_ON_TAP');
 
                         context.pushNamed('AddMaterialPage');
                       },
-                      text: 'New Material',
+                      text: FFLocalizations.of(context).getText(
+                        'snz7acgz' /* New Place */,
+                      ),
                       options: FFButtonOptions(
                         width: 130.0,
                         height: 40.0,
@@ -176,12 +185,13 @@ class _PlacePageWidgetState extends State<PlacePageWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle:
-                            FlutterFlowTheme.of(context).subtitle2.override(
+                            FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Poppins',
                                   color: Colors.white,
                                 ),
+                        elevation: 2.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,

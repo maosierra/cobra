@@ -53,7 +53,7 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
               ),
             ),
           );
@@ -73,16 +73,20 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 0.0),
                     child: Text(
-                      'Materials',
-                      style: FlutterFlowTheme.of(context).title1,
+                      FFLocalizations.of(context).getText(
+                        '6oq2r0ep' /* Materials */,
+                      ),
+                      style: FlutterFlowTheme.of(context).displaySmall,
                     ),
                   ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 10.0, 0.0, 0.0),
                     child: Text(
-                      'List all the materials availables',
-                      style: FlutterFlowTheme.of(context).subtitle2,
+                      FFLocalizations.of(context).getText(
+                        'djjm6x45' /* List all the materials availab... */,
+                      ),
+                      style: FlutterFlowTheme.of(context).titleSmall,
                     ),
                   ),
                   Expanded(
@@ -120,7 +124,10 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
                                           extentRatio: 0.25,
                                           children: [
                                             SlidableAction(
-                                              label: 'Delete',
+                                              label: FFLocalizations.of(context)
+                                                  .getText(
+                                                '3abjv9cl' /* Delete */,
+                                              ),
                                               backgroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .customColor3,
@@ -138,12 +145,12 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
                                           title: Text(
                                             materialsItem.name!,
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                           subtitle: Text(
                                             '${materialsItem.unitOfMeasureName} -  ${materialsItem.description}',
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
+                                                .titleSmall,
                                           ),
                                           tileColor: Color(0xFFF5F5F5),
                                           dense: false,
@@ -168,7 +175,9 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
 
                         context.pushNamed('AddMaterialPage');
                       },
-                      text: 'New Material',
+                      text: FFLocalizations.of(context).getText(
+                        'nu2icdp1' /* New Material */,
+                      ),
                       options: FFButtonOptions(
                         width: 130.0,
                         height: 40.0,
@@ -176,12 +185,13 @@ class _MaterialPageWidgetState extends State<MaterialPageWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryColor,
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle:
-                            FlutterFlowTheme.of(context).subtitle2.override(
+                            FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Poppins',
                                   color: Colors.white,
                                 ),
+                        elevation: 2.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
